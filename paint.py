@@ -18,9 +18,11 @@ from freegames import vector
 def line(start, end):
     "Draw line from start to end."
     up()
-    goto(start.x, start.y)
+   #Levantar pluma
+    goto(start.x, start.y)  #Inicio de la pluma Son duplas, guara dos variables
+    #Bajar pluma
     down()
-    goto(end.x, end.y)
+    goto(end.x, end.y)  #Final de la Pluma
 
 def square(start, end):
     "Draw square from start to end."
@@ -29,9 +31,9 @@ def square(start, end):
     down()
     begin_fill()
 
-    for count in range(4):
+    for count in range(4):  #4 veces, hace una línea y rota 90 grados
         forward(end.x - start.x)
-        left(90)
+        left(90)    #Rota a la izquierda
 
     end_fill()
 
@@ -47,12 +49,13 @@ def triangle(start, end):
     "Draw triangle from start to end."
     pass  # TODO
 
-def tap(x, y):
+#Recibe x y y "donde damos click"
+def tap(x, y):    #Se define una variable donde se guarden coordenadas y las figuras
     "Store starting point or draw shape."
     start = state['start']
 
     if start is None:
-        state['start'] = vector(x, y)
+        state['start'] = vector(x, y)   #Donde guarda el punto 1
     else:
         shape = state['shape']
         end = vector(x, y)
@@ -63,8 +66,8 @@ def store(key, value):
     "Store value in state at key."
     state[key] = value
 
-state = {'start': None, 'shape': line}
-setup(420, 420, 370, 0)
+state = {'start': None, 'shape': line} #Dicccionario  (Desde donde se inicia)
+setup(420, 420, 370, 0) 
 onscreenclick(tap)
 listen()
 onkey(undo, 'u')
