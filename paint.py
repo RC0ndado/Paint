@@ -43,22 +43,16 @@ def square(start, end):
 
     end_fill()
 
-def circle(start, end):
+def circlee(start, end):
     "Draw circle from start to end."
     up()
     goto(start.x, start.y)
     #right(90)
     down()
     begin_fill()
-    turtle.circle((end.x - start.x)/2)
+    #turtle.circle((end.x - start.x)/2)
+    circle((end.x - start.x)/2)
     end_fill()
-
-
-    #for count in range(360):
-    #    forward((end.x - start.x)/120)
-    #    left(1)
-
-    #end_fill() #Función para crear círculo
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
@@ -91,6 +85,7 @@ listen()
 onkey(undo, 'u')
 
 #Define las teclas que cambian de color
+#Mas aparte color nuevo
 
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
