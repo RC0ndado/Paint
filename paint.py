@@ -5,8 +5,6 @@
 #Autor: Ricardo Rmz. Condado
 #Autor: Nancy L. Garcia Jimenez
 
-
-
 """Paint, for drawing shapes.
 Exercises
 1. Add a color.
@@ -112,7 +110,7 @@ onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
 onkey(lambda: color ('yellow'), 'Y')
 
-#Define laa tecla asociada a cada figura
+#Define la tecla asociada a cada figura
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
