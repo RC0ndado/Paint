@@ -11,18 +11,18 @@ Exercises
 5. Add width parameter.
 
 """
-
+#import turtle
 from turtle import *
+#import freegames
 from freegames import vector
+#import vector
 
 def line(start, end):
     "Draw line from start to end."
     up()
-   #Levantar pluma
-    goto(start.x, start.y)  #Inicio de la pluma Son duplas, guara dos variables
-    #Bajar pluma
+    goto(start.x, start.y)
     down()
-    goto(end.x, end.y)  #Final de la Pluma
+    goto(end.x, end.y)
 
 def square(start, end):
     "Draw square from start to end."
@@ -31,15 +31,25 @@ def square(start, end):
     down()
     begin_fill()
 
-    for count in range(4):  #4 veces, hace una línea y rota 90 grados
+    for count in range(4):
         forward(end.x - start.x)
-        left(90)    #Rota a la izquierda
+        left(90)
 
     end_fill()
 
 def circle(start, end):
     "Draw circle from start to end."
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    right(90)
+    down()
+    begin_fill()
+
+    for count in range(360):
+        forward((end.x - start.x)/120)
+        left(1)
+
+    end_fill() 
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
@@ -49,13 +59,12 @@ def triangle(start, end):
     "Draw triangle from start to end."
     pass  # TODO
 
-#Recibe x y y "donde damos click"
-def tap(x, y):    #Se define una variable donde se guarden coordenadas y las figuras
+def tap(x, y):
     "Store starting point or draw shape."
     start = state['start']
 
     if start is None:
-        state['start'] = vector(x, y)   #Donde guarda el punto 1
+        state['start'] = vector(x, y)
     else:
         shape = state['shape']
         end = vector(x, y)
@@ -66,8 +75,8 @@ def store(key, value):
     "Store value in state at key."
     state[key] = value
 
-state = {'start': None, 'shape': line} #Dicccionario  (Desde donde se inicia)
-setup(420, 420, 370, 0) 
+state = {'start': None, 'shape': line}
+setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
 onkey(undo, 'u')
