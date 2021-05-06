@@ -1,17 +1,18 @@
+#Trabajo de Semana TEC
+
 """Paint, for drawing shapes.
-
 Exercises
-
 1. Add a color.
 2. Complete circle.
 3. Complete rectangle.
 4. Complete triangle.
 5. Add width parameter.
-
 """
-
+#import turtle
 from turtle import *
+#import freegames
 from freegames import vector
+#import vector
 
 def line(start, end):
     "Draw line from start to end."
@@ -35,15 +36,48 @@ def square(start, end):
 
 def circle(start, end):
     "Draw circle from start to end."
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    right(90)
+    down()
+    begin_fill()
+
+    for count in range(360):
+        forward((end.x - start.x)/120)
+        left(1)
+
+    end_fill() #Función para crear círculo
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
-    pass  # TODO
+    #pass  # TODO
+    up()#línea hacia arriba
+    #función que permite desplazar el cursor a una posición determinada del área de dibujo.
+    goto(start.x,start.y)
+    down()#línea hacia abajo
+    #colorear rectángulo
+    begin_fill()
+    for i in range(2):
+        forward(200)
+        right(90)
+        forward(100)
+        right(90)
+    end_fill()
 
 def triangle(start, end):
     "Draw triangle from start to end."
-    pass  # TODO
+    #pass  # TODO
+    up()#línea hacia arriba
+    #función que permite desplazar el cursor a una posición determinada del área de dibujo.
+    goto(start.x,start.y)
+    down()#línea hacia abajo
+    #colorear rectángulo
+    begin_fill()
+    for i in range(2):
+        forward(end.x - start.y)
+        right(90)
+        right(150)
+    end_fill()
 
 def tap(x, y):
     "Store starting point or draw shape."
@@ -61,7 +95,7 @@ def store(key, value):
     "Store value in state at key."
     state[key] = value
 
-state = {'start': None, 'shape': line}
+state = {'start': None, 'shape': triangle}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
@@ -77,18 +111,3 @@ onkey(lambda: store('shape', circle), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
-Logo
-
-Free Python Games
-
-
-Donate
-If you or your organization uses Free Games, consider donating:
-
-Donate to Free Python Games
-
-Related Topics
-Documentation overview
-Previous: Crypto
-Next: Maze
-Quick search
