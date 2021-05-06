@@ -46,6 +46,7 @@ def circlee(start, end):
     color("black", "red")
     down()
     begin_fill()
+    #turtle.circle((end.x - start.x)/2)
     circle((end.x - start.x)/2)
     end_fill()
 
@@ -103,6 +104,10 @@ listen()
 onkey(undo, 'u')
 
 #Define las teclas que cambian de color
+
+
+#Mas aparte color nuevo
+
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
@@ -113,7 +118,7 @@ onkey(lambda: color ('yellow'), 'Y')
 #Define la tecla asociada a cada figura
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
-onkey(lambda: store('shape', circle), 'c')
+onkey(lambda: store('shape', circlee), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
