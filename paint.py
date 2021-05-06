@@ -49,7 +49,7 @@ def circle(start, end):
         forward((end.x - start.x)/120)
         left(1)
 
-    end_fill() 
+    end_fill() #Función para crear círculo
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
@@ -58,7 +58,7 @@ def rectangle(start, end):
 def triangle(start, end):
     "Draw triangle from start to end."
     pass  # TODO
-
+ 
 def tap(x, y):
     "Store starting point or draw shape."
     start = state['start']
