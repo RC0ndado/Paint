@@ -3,7 +3,7 @@
 #Código modificado por:
 
 #Autor: Ricardo Rmz. Condado
- 
+
 
 
 """Paint, for drawing shapes.
@@ -37,27 +37,18 @@ def square(start, end):
     for count in range(4):
         forward(end.x - start.x)
         left(90)
-
     end_fill()
 
-def circle(start, end):
+def circlee(start, end):
     "Draw circle from start to end."
     up()
     goto(start.x, start.y)
     bgcolor("blue")
     color("black", "red")
-    #right(90)
     down()
     begin_fill()
-    turtle.circle((end.x - start.x)/2)
+    circle((end.x - start.x)/2)
     end_fill()
-
-
-    #for count in range(360):
-    #    forward((end.x - start.x)/120)
-    #    left(1)
-
-    #end_fill() #Función para crear círculo
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
@@ -106,7 +97,7 @@ def store(key, value):
     "Store value in state at key."
     state[key] = value
 
-state = {'start': None, 'shape': triangle}
+state = {'start': None, 'shape': line}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
