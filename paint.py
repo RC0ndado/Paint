@@ -3,6 +3,7 @@
 #Código modificado por:
 
 #Autor: Ricardo Rmz. Condado
+#Autor: Nancy L. Garcia Jimenez
 
 
 
@@ -104,7 +105,6 @@ listen()
 onkey(undo, 'u')
 
 #Define las teclas que cambian de color
-
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
@@ -112,8 +112,7 @@ onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
 onkey(lambda: color ('yellow'), 'Y')
 
-#Define laa tecla asociada a cada figura 
-
+#Define laa tecla asociada a cada figura
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
