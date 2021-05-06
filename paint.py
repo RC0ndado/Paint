@@ -46,15 +46,18 @@ def circle(start, end):
     goto(start.x, start.y)
     bgcolor("blue")
     color("black", "red")
-    right(90)
+    #right(90)
     down()
     begin_fill()
+    turtle.circle((end.x - start.x)/2)
+    end_fill()
 
-    for count in range(360):
-        forward((end.x - start.x)/120)
-        left(1)
 
-    end_fill() #Función para crear círculo
+    #for count in range(360):
+    #    forward((end.x - start.x)/120)
+    #    left(1)
+
+    #end_fill() #Función para crear círculo
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
