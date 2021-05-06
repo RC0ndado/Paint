@@ -41,6 +41,8 @@ def circle(start, end):
     "Draw circle from start to end."
     up()
     goto(start.x, start.y)
+    bgcolor("blue")
+    color("black", "red")
     right(90)
     down()
     begin_fill()
