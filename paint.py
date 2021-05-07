@@ -54,7 +54,8 @@ def circlee(start, end):
     begin_fill()
 
     #turtle.circle((end.x - start.x)/2)
-    circle((end.x - start.x)/2)
+    circle((end.x - start.x)
+            /2)
     end_fill()
 
 def rectangle(start, end):
@@ -87,12 +88,6 @@ def triangle(start, end):
         right(90)
         right(150)
     end_fill()
-
-    circle((end.x - start.x)
-           / 2)
-
-    end_fill()
-
 
 def rectangle(start, end):
 
@@ -136,9 +131,6 @@ listen()
 onkey(undo, 'u')
 
 #Define las teclas que cambian de color
-#Mas aparte color nuevo
-
-
 #Mas aparte color nuevo
 
 onkey(lambda: color('black'), 'K')
