@@ -13,11 +13,11 @@ Exercises
 4. Complete triangle.
 5. Add width parameter.
 """
-#import turtle
+
 from turtle import *
-#import freegames
 from freegames import vector
-#import vector
+
+#Define cómo es que funciona la línea
 
 def line(start, end):
     "Draw line from start to end."
@@ -25,6 +25,8 @@ def line(start, end):
     goto(start.x, start.y)
     down()
     goto(end.x, end.y)
+
+#Establece como se dibujará un cuadrado
 
 def square(start, end):
     "Draw square from start to end."
@@ -38,6 +40,10 @@ def square(start, end):
         left(90)
     end_fill()
 
+#Se le colocó el nombre "circlee"
+#Después se usó "circle" para dibujar
+
+
 def circlee(start, end):
     "Draw circle from start to end."
     up()
@@ -46,6 +52,7 @@ def circlee(start, end):
     color("black", "red")
     down()
     begin_fill()
+
     #turtle.circle((end.x - start.x)/2)
     circle((end.x - start.x)/2)
     end_fill()
@@ -81,9 +88,30 @@ def triangle(start, end):
         right(150)
     end_fill()
 
+    circle((end.x - start.x)
+           / 2)
+
+    end_fill()
+
+
+def rectangle(start, end):
+
+    pass  # TODO
+
+def triangle(start, end):
+    "Draw triangle from start to end."
+    pass  # TODO
+
+#Se almacenan coordenadas x, y al dar click
+
+
 def tap(x, y):
     "Store starting point or draw shape."
+
+    #Estado actual de state
     start = state['start']
+
+#Condicional para determinar si se traza la figura o no.
 
     if start is None:
         state['start'] = vector(x, y)
@@ -93,9 +121,13 @@ def tap(x, y):
         shape(start, end)
         state['start'] = None
 
+#Almacena la figura hasta que pulsamos alguna tecla.
+
 def store(key, value):
     "Store value in state at key."
     state[key] = value
+
+#Guarda el primer punto, por defecto traza una línea
 
 state = {'start': None, 'shape': line}
 setup(420, 420, 370, 0)
@@ -104,6 +136,7 @@ listen()
 onkey(undo, 'u')
 
 #Define las teclas que cambian de color
+#Mas aparte color nuevo
 
 
 #Mas aparte color nuevo
