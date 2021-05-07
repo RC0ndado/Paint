@@ -89,16 +89,7 @@ def triangle(start, end):
         right(150)
     end_fill()
 
-def rectangle(start, end):
-
-    pass  # TODO
-
-def triangle(start, end):
-    "Draw triangle from start to end."
-    pass  # TODO
-
 #Se almacenan coordenadas x, y al dar click
-
 
 def tap(x, y):
     "Store starting point or draw shape."
