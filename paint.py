@@ -27,6 +27,8 @@ def line(start, end):
     goto(end.x, end.y)
 
 #Establece como se dibujará un cuadrado
+#Con base a un ciclo es como se dibuja.
+#Cuando dibuje una línea, dará una vuelta a 90°
 
 def square(start, end):
     "Draw square from start to end."
@@ -53,19 +55,15 @@ def circlee(start, end):
     down()
     begin_fill()
 
-    #turtle.circle((end.x - start.x)/2)
     circle((end.x - start.x)
             /2)
     end_fill()
 
 def rectangle(start, end):
-    "Draw rectangle from start to end."
-    #pass  # TODO
-    up()#línea hacia arriba
-    #función que permite desplazar el cursor a una posición determinada del área de dibujo.
+
+    up()
     goto(start.x,start.y)
-    down()#línea hacia abajo
-    #colorear rectángulo
+    down()
     begin_fill()
     for i in range(2):
         forward(200)
@@ -75,13 +73,10 @@ def rectangle(start, end):
     end_fill()
 
 def triangle(start, end):
-    "Draw triangle from start to end."
-    #pass  # TODO
+
     up()#línea hacia arriba
-    #función que permite desplazar el cursor a una posición determinada del área de dibujo.
     goto(start.x,start.y)
-    down()#línea hacia abajo
-    #colorear rectángulo
+    down()
     begin_fill()
     for i in range(2):
         forward(end.x - start.y)
