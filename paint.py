@@ -45,7 +45,6 @@ def square(start, end):
 #Se le colocó el nombre "circlee"
 #Después se usó "circle" para dibujar
 
-
 def circlee(start, end):
     "Draw circle from start to end."
     up()
@@ -59,6 +58,8 @@ def circlee(start, end):
             /2)
     end_fill()
 
+#Se coloca un ciclo for para crear el dibujo.
+
 def rectangle(start, end):
 
     up()
@@ -71,6 +72,8 @@ def rectangle(start, end):
         forward(100)
         right(90)
     end_fill()
+
+#Dibuja el triángulo con un for.
 
 def triangle(start, end):
 
@@ -127,6 +130,7 @@ onkey(lambda: color('red'), 'R')
 onkey(lambda: color ('yellow'), 'Y')
 
 #Define la tecla asociada a cada figura
+
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circlee), 'c')
