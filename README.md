@@ -16,18 +16,18 @@ Las modificaciones que se solicitaron en el juego fueron:
 2. Para la realización del círculo solo se cambió el nombre de la función original "circle" porque al crear la nueva función y al realizarle algunas modificaciones, como lo fue hacer (end.x - start.x)/2, llamaría a la función "circle" y diburía el círculo totalmente.
 
 
-def circlee(start, end):
-    "Draw circle from start to end."
-    up()
-    goto(start.x, start.y)
-    bgcolor("blue")
-    color("black", "red")
-    down()
-    begin_fill()
+       def circlee(start, end):
+            "Draw circle from start to end."
+            up()
+            goto(start.x, start.y)
+            bgcolor("blue")
+            color("black", "red")
+            down()
+            begin_fill()
 
-    circle((end.x - start.x)
+        circle((end.x - start.x)
             /2)
-    end_fill()
+         end_fill()
 
 
 3.  
