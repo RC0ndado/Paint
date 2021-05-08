@@ -30,5 +30,31 @@ Las modificaciones que se solicitaron en el juego fueron:
          end_fill()
 
 
-3.  
+## Nancy
+3. Coloqué un ciclo for para que en base a los dos puntos dados, se trazara la figura, en el caso del rectángulo se dió un giro de 90°
+4. Coloqué un ciclo for para que en base a los dos puntos dados, se trazara la figura, en el caso del triángulo se realizó una resta de puntos con la función forward (forward(end.x - start.y)) junto a giros de 90° y 150°.
+
+       def rectangle(start, end):
+              up()
+              goto(start.x,start.y)
+              down()
+              begin_fill()
+              for i in range(2):
+                     forward(200)
+                     right(90)
+                     forward(100)
+                     right(90)
+              end_fill()
+
+       def triangle(start, end):
+
+              up()#línea hacia arriba
+              goto(start.x,start.y)
+              down()
+              begin_fill()
+              for i in range(2):
+                     forward(end.x - start.y)
+                     right(90)
+                     right(150)
+              end_fill()
   
